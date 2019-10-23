@@ -1,0 +1,48 @@
+.body{
+    margin: 10px 150px;
+    background-color: white;
+    height:auto;
+}
+// .danhmuc{
+//     width: auto;
+//     height: auto;
+// }
+.carousel{
+    border: 2px  solid yellow;
+    width: auto;
+}
+// .vertical-menu{
+//     border-radius: 10px;
+// }
+// .vertical-menu a {
+//   background-color: #eee;
+//   color: black;
+//   display: block;
+//   padding: 12px;
+//   text-decoration: none;
+// }
+
+// .vertical-menu a:hover {
+//   background-color: rgb(245, 242, 88);
+// }
+
+// .vertical-menu a.active {
+//   background-color: #FAEA00;
+//   color: black;
+//   font-weight: bold;
+// }
+.grid-container {
+  display: grid;
+  grid-template-columns: 820px 400px;
+}
+.QC-right{
+ 
+  img{
+    height: 103px;
+    width: 400px;
+   
+    float:right;
+    border:3px solid yellow;
+  }
+ 
+}

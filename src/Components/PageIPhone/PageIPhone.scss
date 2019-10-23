@@ -1,0 +1,106 @@
+.PageIPhoneComponent {
+  .allphone-img {
+    .a {
+      height: 13%;
+      width: 13%;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+  }
+  .galleryall {
+    margin: 0px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 304px;
+    height: auto;
+    transition: transform 0.4s;
+    .desc {
+      padding: 10px 5px 0 5px;
+      text-align: left;
+      .aname {
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .pall {
+        color: red;
+        font-size: 14px;
+        font-weight: bold;
+        .aall {
+          color: black;
+          font-size: 13px;
+          text-decoration-line: line-through;
+          font-weight: normal;
+          font-style: italic;
+        }
+      }
+    }
+    .description {
+      font-family: Helvetica, Arial, "DejaVu Sans", "Liberation Sans", Freesans, sans-serif;
+      font-size: 12px;
+      text-align: left;
+      margin-left: 5px;
+      hr {
+        border-top: 1px dashed #8c8b8b;
+      }
+    }
+    img {
+      width: 70%;
+      padding-top: 20px;
+      height: auto;
+    }
+    .btnn {
+      width: 80px;
+      height: 30px;
+      color: orange;
+      background-color: white;
+      border: 1px solid orange;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    &:hover {
+      .btnn {
+        width: 80px;
+        height: 30px;
+        color: white;
+        background-color: orange;
+        border: 1px solid orange;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+      img {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+//   .galleryall img {
+//     width: 60%;
+//     padding-top: 10px;
+//     height: auto;
+//     &:hover {
+//       padding-top: 0px;
+//       padding-bottom: 10px;
+//     }
+//   }
+  .giamgia {
+    background: linear-gradient(to bottom, red 0%, orange 100%);
+    margin: 0 150px 0 5px;
+    border-radius: 10px;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+  }
+  .banner {
+    margin: 0 150px;
+    img {
+      width: 1220px;
+    }
+  }
+  .heightphone {
+    margin: 10px 150px;
+    background-color: white;
+    height: 1000px;
+  }
+}

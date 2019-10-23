@@ -1,0 +1,236 @@
+[
+    {
+        "id": 1,
+        "name_phone": "iPhone 11 Pro Max 512GB",
+        "category": "Iphone",
+        "NB":true,
+        "price": 43990000,
+        "discount":0,
+        "description": "Iphone hihahihi",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/210654/iphone-11-pro-max-512gb-gold-600x600.jpg"
+    },
+    {
+        "id": 2,
+        "name_phone": "iPhone 11 Pro Max 256GB",
+        "category": "Iphone",
+        "NB":true,
+        "price": 37990000,
+        "discount":0,
+        "description": "Iphone hihahihi",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/210653/iphone-11-pro-max-256gb-black-600x600.jpg"
+    },
+    {
+        "id": 3,
+        "name_phone": "iPhone Xs Max 256GB",
+        "category": "Iphone",
+        "NB":true,
+        "discount":3000000,
+        "price": 35990000,
+        "description": "hasellus in felis. Donec semper sapien a libero. Nam dui.",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/190322/iphone-xs-max-256gb-white-600x600.jpg"
+    },
+    {
+        "id": 4,
+        "name_phone": "iPhone 11 Pro 256GB",
+        "category": "Iphone",
+        "discount":0,
+        "price": 34900000,
+        "description": "hasellus in felis. Donec semper sapien a libero. Nam dui.",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/210655/iphone-11-pro-256gb-gold-600x600.jpg"
+    },
+    {
+        "id": 5,
+        "name_phone": "Samsung Galaxy S10+",
+        "category": "Samsung",
+        "NB":true,
+        "discount":0,
+        "price": 28990000,
+        "description": "Samsung hahahii",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/198986/sieu-pham-galaxy-s-moi-2-512gb-black-600x600.jpg"
+    },
+    {
+        "id": 6,
+        "name_phone": "Samsung Galaxy Note 10+",
+        "category": "Samsung",
+        "NB":true,
+        "price": 26990000,
+        "discount":0,
+        "description": "Samsung hahahii",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/206176/samsung-galaxy-note-10-plus-white-600x600.jpg"
+    },
+    {
+        "id": 7,
+        "name_phone": "Samsung Galaxy Note 9 ",
+        "category": "Samsung",
+        "price": 22990000,
+        "discount":6000000,
+        "sale":true,
+        "description": "Samsung hahahii",
+        "img": "https://imgs.viettelstore.vn/images/Product/ProductImage/medium/9196629362.jpg"
+    },
+    {
+        "id": 8,
+        "name_phone": "Samsung Galaxy Note 10",
+        "category": "Samsung",
+        "NB":true,
+        "price": 22990000,
+        "discount":0,
+        "description": "Samsung hahahii",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/198986/sieu-pham-galaxy-s-moi-2-512gb-black-400x400.jpg"
+    },
+    {
+        "id": 9,
+        "name_phone": "Oppo Reno 10x Zoom Edition ",
+        "category": "Oppo",
+        "price": 20990000,
+        "discount":0,
+        "description": "Oppo hiahahah",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/201235/oppo-reno-10x-zoom-edition-black-600x600.jpg"
+    },
+    {
+        "id": 10,
+        "name_phone": "Oppo Reno2 ",
+        "category": "Oppo",
+        "NB":true,
+        "price": 14990000,
+        "discount":0,
+        "description": "Oppo hiahahah",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/209798/oppo-reno2-600x600.jpg"
+    },
+    {
+        "id": 11,
+        "name_phone": "Oppo Reno",
+        "category": "Oppo",
+        "NB":true,
+        "price": 12990000,
+        "discount":2000000,
+        "description": "Oppo hiahahah",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/200438/oppo-reno-pink-600x600.jpg"
+    },
+    {
+        "id": 12,
+        "name_phone": "Oppo Reno2 F",
+        "category": "Oppo",
+        "NB":true,
+        "price": 8990000,
+        "discount":0,
+        "description": "Oppo hiahahah",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/209800/oppo-reno2-f-green-mtp-600x600.jpg"
+    },
+    {
+        "id": 13,
+        "name_phone": "Xiaomi Mi 9 SE",
+        "category": "Xiaomi",
+        "price": 8490000,
+        "sale":true,
+        "discount":1000000,
+        "description": "Xiaomi hiahia",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/198394/xiaomi-mi-9-se-blue-18thangbh-600x600.jpg"
+    },
+    {
+        "id": 14,
+        "name_phone": "Xiaomi Mi 9T",
+        "category": "Xiaomi",
+        "NB":true,
+        "price": 7990000,
+        "discount":0,
+        "description": "Xiaomi hiahia",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/203053/xiaomi-mi-9t-red-18thangbh-600x600.jpg"
+    },
+    {
+        "id": 15,
+        "name_phone": "Xiaomi Redmi Note 8 Pro",
+        "category": "Xiaomi",
+        "NB":true,
+        "discount":0,
+        "price": 5990000,
+        "description": "Xiaomi hiahia",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/209797/xiaomi-redmi-note-8-pro-white-18thangbh-600x600.jpg"
+    },
+    {
+        "id": 16,
+        "name_phone": "Xiaomi Mi A3",
+        "category": "Xiaomi",
+        "sale":true,
+        "discount":1000000,
+        "price": 5990000,
+        "description": "Xiaomi hiahia",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/197845/xiaomi-mi-a3-white-600x600.jpg"
+    },
+    {
+        "id": 17,
+        "name_phone": "Huawei P30 Pro",
+        "category": "Huawei",
+        "NB":true,
+        "sale":true,
+        "discount":2300000,
+        "price": 22990000,
+        "description": "Huawei hiahai",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/114111/iphone-x-256gb-a1-600x600.jpg"
+    },
+    {
+        "id": 18,
+        "name_phone": "Huawei P30 Lite",
+        "category": "Huawei",
+        "price": 6690000,
+        "discount":670000,
+        "sale":true,
+        "description": "Huawei hiahai",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/190326/iphone-xr-256gb-white-600x600.jpg"
+    },
+    {
+        "id": 19,
+        "name_phone": "Huawei Y9 Prime (2019)",
+        "category": "Huawei",
+        "price": 6490000,
+        "discount":650000,
+        "description": "Huawei hiahai",
+        "img": "https://imgs.viettelstore.vn/images/Product/ProductImage/medium/9196629362.jpg"
+    },
+    {
+        "id": 20,
+        "name_phone": "Huawei Nova 3i Trang",
+        "category": "Huawei",
+        "price": 5900000,
+        "discount":1500000,
+        "sale":true,
+        "description": "Huawei hiahai",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/198986/sieu-pham-galaxy-s-moi-2-512gb-black-400x400.jpg"
+    },
+    {
+        "id": 21,
+        "name_phone": "Nokia 8.1",
+        "category": "Nokia",
+        "price": 6590000,
+        "discount":0,
+        "description": "Nokia hiahia",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/194917/nokia-81-blue-18thangbh-600x600.jpg"
+    },
+    {
+        "id": 22,
+        "name_phone": "Nokia 7.2",
+        "category": "Nokia",
+        "price": 6190000,
+        "discount":0,
+        "description": "Nokia hiahia",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/207650/nokia-72-black-600x600.jpg"
+    },
+    {
+        "id": 23,
+        "name_phone": "Nokia 6.1 Plus",
+        "category": "Nokia",
+        "price": 3990000,
+        "discount":0,
+        "description": "Nokia hiahia",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/167150/nokia-61-plus-2-600x600.jpg"
+    },
+    {
+        "id": 24,
+        "name_phone": "Nokia 5.1 Plus",
+        "category": "Nokia",
+        "price": 3290000,
+        "discount":0,
+        "description": "Nokia hiahia",
+        "img": "https://cdn.tgdd.vn/Products/Images/42/179472/nokia-51-plus-black-18thangbh-600x600.jpg"
+    }  
+]

@@ -1,0 +1,64 @@
+.AllPhoneComponent {
+  .allphone-img {
+    .a {
+      height: 13%;
+      width: 13%;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+  }
+
+  .galleryall {
+    margin: 0px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 203px;
+    height: 350px;
+    transition: transform 0.4s;
+    .desc {
+      padding: 10px 5px 0 5px;
+      text-align: left;
+      .aname {
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .pall {
+        color: red;
+        font-size: 15px;
+        font-weight: bold;
+        float: bottom;
+        .aall {
+          color: black;
+          font-size: 13px;
+          text-decoration-line: line-through;
+          font-weight: normal;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  .galleryall img {
+    width: 100%;
+    padding-top: 10px;
+    height: auto;
+    &:hover {
+      padding-top: 0px;
+      padding-bottom: 10px;
+    }
+  }
+  .giamgia {
+    background: linear-gradient(to bottom, red 0%, orange 100%);
+    margin: 0 30px 0 5px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+  }
+  .heightphone {
+    margin: 10px 150px;
+    background-color: white;
+    height: 2200px;
+  }
+  
+}
