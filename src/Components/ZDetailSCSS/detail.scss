@@ -1,0 +1,126 @@
+.bodydetail {
+  background-color: white;
+  margin-top: 55px;
+  .href{
+    text-decoration: none;
+    color: black;
+    &:hover{
+        color: orange;
+    }
+  }
+  .home {
+    margin: 0 150px;
+    .p {
+      padding-top: 10px;
+      font-size: 15px;
+      margin-bottom: 20px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ccc;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 450px 450px;
+    
+      img {
+        padding: 20px;
+        width: 100%;
+        height: 400px;
+      }
+      .nameproduct {
+        margin-top: 10px;
+        font-size: 24px;
+        margin-bottom: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .price {
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 0;
+        color: orange;
+      }
+      .pricee {
+        font-size: 15px;
+        margin-left: 10px;
+        text-decoration-line: line-through;
+        color: black;
+      }
+      .khuyenmai {
+        border-radius: 5px;
+        padding-bottom: 40px;
+        border: 1px solid #e0e0e0;
+        .p-km {
+          padding: 5px;
+
+          background-color: #e1e1e1;
+        }
+        .i-km {
+          margin-top: 5px;
+          margin-left: 10px;
+          display: block;
+          color: #ff5214;
+          span {
+            color: #333;
+            font-weight: normal;
+            font-size: 14px;
+            font-family: "Arial", Helvetica, sans-serif;
+            margin-left: 10px;
+          }
+        }
+      }
+      .muangay {
+        background: linear-gradient(#ff9d14, #ff5214);
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 5px;
+        height: auto;
+        p {
+          color: white;
+        }
+        .p1 {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 0px;
+        }
+        .p2 {
+          font-size: 13px;
+          margin-bottom: 10px;
+        }
+      }
+      .muatragop {
+        margin: 10px 0px 0px 0px;
+        color: white;
+        .muatragop1 {
+          border-radius: 5px;
+          background-color: #06c0f9;
+          margin-right: 10px;
+          width: 220px;
+          text-align: center;
+          .p1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 0px;
+          }
+          .p2 {
+            font-size: 13px;
+            margin-bottom: 10px;
+          }
+        }
+        .muatragop2 {
+          border-radius: 5px;
+          background-color: #06c0f9;
+          width: 220px;
+          text-align: center;
+          .p1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 0px;
+          }
+          .p2 {
+            font-size: 13px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

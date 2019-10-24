@@ -66,7 +66,7 @@
         "discount":6000000,
         "sale":true,
         "description": "Samsung hahahii",
-        "img": "https://imgs.viettelstore.vn/images/Product/ProductImage/medium/9196629362.jpg"
+        "img": "https://cdn.tgdd.vn/Products/Images/42/154897/samsung-galaxy-note-9-black-600x600.jpg"
     },
     {
         "id": 8,
@@ -166,7 +166,7 @@
         "discount":2300000,
         "price": 22990000,
         "description": "Huawei hiahai",
-        "img": "https://cdn.tgdd.vn/Products/Images/42/114111/iphone-x-256gb-a1-600x600.jpg"
+        "img": "https://cdn.tgdd.vn/Products/Images/42/197228/huawei-p30-pro-1-600x600.jpg"
     },
     {
         "id": 18,
@@ -176,7 +176,7 @@
         "discount":670000,
         "sale":true,
         "description": "Huawei hiahai",
-        "img": "https://cdn.tgdd.vn/Products/Images/42/190326/iphone-xr-256gb-white-600x600.jpg"
+        "img": "https://cdn.tgdd.vn/Products/Images/42/198985/huawei-p30-lite-1-600x600.jpg"
     },
     {
         "id": 19,
@@ -185,17 +185,17 @@
         "price": 6490000,
         "discount":650000,
         "description": "Huawei hiahai",
-        "img": "https://imgs.viettelstore.vn/images/Product/ProductImage/medium/9196629362.jpg"
+        "img": "https://cdn.tgdd.vn/Products/Images/42/202268/huawei-y9-prime-2019-blue-2-600x600.jpg"
     },
     {
         "id": 20,
-        "name_phone": "Huawei Nova 3i Trang",
+        "name_phone": "Huawei Nova 3i Trắng",
         "category": "Huawei",
         "price": 5900000,
         "discount":1500000,
         "sale":true,
         "description": "Huawei hiahai",
-        "img": "https://cdn.tgdd.vn/Products/Images/42/198986/sieu-pham-galaxy-s-moi-2-512gb-black-400x400.jpg"
+        "img": "https://cdn.tgdd.vn/Products/Images/42/191784/huawei-nova-3i-trang-11-600x600.jpg"
     },
     {
         "id": 21,

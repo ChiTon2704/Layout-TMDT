@@ -19,8 +19,8 @@
       padding: 10px 5px 0 5px;
       text-align: left;
       .aname {
-        font-weight: bold;
         font-size: 14px;
+        font-family: Helvetica, Arial, "DejaVu Sans", "Liberation Sans", Freesans, sans-serif;
       }
       .pall {
         color: red;
@@ -32,18 +32,21 @@
           font-size: 13px;
           text-decoration-line: line-through;
           font-weight: normal;
+          float: right;
           font-style: italic;
         }
       }
     }
-  }
-  .galleryall img {
-    width: 100%;
-    padding-top: 10px;
-    height: auto;
+    img {
+      width: 100%;
+      padding-top: 20px;
+      height: auto;
+    }
     &:hover {
-      padding-top: 0px;
-      padding-bottom: 10px;
+      img {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
     }
   }
   .giamgia {
@@ -55,10 +58,23 @@
     font-weight: bold;
     color: white;
   }
+  .tragop{
+    background-color: orange;
+    margin: 0 110px 0 5px;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 13px;
+    vertical-align: center;
+    font-weight: bold;
+    color: white;
+  }
+  .href{
+    text-decoration: none;
+    color: black;
+  }
   .heightphone {
     margin: 10px 150px;
     background-color: white;
     height: 2200px;
   }
-  
 }

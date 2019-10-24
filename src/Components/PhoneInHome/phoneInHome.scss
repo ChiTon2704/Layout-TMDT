@@ -40,6 +40,7 @@
 .p {
   font-size: 14px;
   height: 25px;
+  color: black;
   text-decoration: none;
 }
 .gallery img {
@@ -188,6 +189,7 @@
     .price213{
       font-style: italic;
       font-size: 13px;
+      display: inline;
       color: black;
       text-decoration-line: line-through;
     }
@@ -233,6 +235,7 @@
     .price22{
       font-style: italic;
       font-size: 13px;
+      display: inline;
       color: black;
       text-decoration-line: line-through;
     }

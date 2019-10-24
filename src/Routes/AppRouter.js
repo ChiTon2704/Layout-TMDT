@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar/Navbar';
 import Footer from '../Components/Footer';
 import Home from '../Page/Home';
 import Products from '../Page/Products';
+import ProductDetail from '../Page/ProductDetail';
 import IPhone from '../Page/IPhone';
 import SamSung from '../Page/SamSung';
 import Oppo from '../Page/Oppo';
@@ -19,13 +20,14 @@ export default class AppRouter extends Component {
                     <Navbar />
                     <Switch>
                         <Route path='/' component={Home} exact={true} />
-                        <Route path='/products' component={Products} />
-                        <Route path='/iphone' component={IPhone}/>
-                        <Route path='/samsung' component={SamSung}/>
-                        <Route path='/oppo' component={Oppo}/>
-                        <Route path='/xiaomi' component={Xiaomi}/>
-                        <Route path='/huawei' component={Huawei}/>
-                        <Route path='/nokia' component={Nokia}/>
+                        <Route exact path='/products' component={Products} />
+                        <Route path='/products/:id' component={ProductDetail} />
+                        <Route path='/iphone' component={IPhone} />
+                        <Route path='/samsung' component={SamSung} />
+                        <Route path='/oppo' component={Oppo} />
+                        <Route path='/xiaomi' component={Xiaomi} />
+                        <Route path='/huawei' component={Huawei} />
+                        <Route path='/nokia' component={Nokia} />
                         {/* <Route component={NotFound} /> */}
                     </Switch>
                     <Footer />
