@@ -1,18 +1,19 @@
 import React from 'react';
 import '../Search/index.scss';
+import { Link } from 'react-router-dom';
 class Search extends React.Component {
-    constructor(props){
-        super(props);
-        this.state={
-            numCart: this.props.soluong
-        }
-    }
+    // constructor(props){
+    //     super(props);
+    //     this.state={
+    //         numCart: this.props.soluong
+    //     }
+    // }
     render() {
         return (
             <div className="search_bar">
                 <div className="row ">
                     {/* logo */}
-                    <div className="col-2  ">
+                    <div className="col-1  ">
                     </div>
                     {/* search */}
                     <div className="col-5 search">
@@ -28,18 +29,20 @@ class Search extends React.Component {
                         </form>
                     </div>
                     {/* Account */}
-                    <div className="col-2  text-center" >
+                    <div className="col-3  text-center" >
                         <div className="account vertical-center ">
-                            <i className=' fas fa-user-alt'></i>
-                            <a className="tk">Tài khoản</a>
+                            {/* <i className=' fas fa-user-alt'></i> */}
+                            {/* <a className="tk">Tài khoản</a> */}
                         </div>
                     </div>
                     {/* cart */}
                     <div className="col-2 " >
-                        <span className="cartspan vertical-center">
-                            <i className="cart fas fa-shopping-cart "></i>
-                            <a className="">Giỏ hàng({this.state.numCart})</a>
-                        </span>
+                        <Link className="href" to='/cart'>
+                            <span className="cartspan vertical-center">
+                                <i className="cart fas fa-shopping-cart "></i>
+                                <i className="">Giỏ hàng()</i>
+                            </span>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 // components
 import Navbar from '../Components/Navbar/Navbar';
 import Footer from '../Components/Footer';
@@ -12,6 +12,8 @@ import Oppo from '../Page/Oppo';
 import Xiaomi from '../Page/Xiaomi';
 import Huawei from '../Page/Huawei';
 import Nokia from '../Page/Nokia';
+import NotFound from '../Page/NotFound';
+import Cart from '../Page/Cart';
 export default class AppRouter extends Component {
     render() {
         return (
@@ -28,6 +30,9 @@ export default class AppRouter extends Component {
                         <Route path='/xiaomi' component={Xiaomi} />
                         <Route path='/huawei' component={Huawei} />
                         <Route path='/nokia' component={Nokia} />
+                        <Route path='/cart' component={Cart}/>
+                        <Route component={NotFound} />
+                        
                         {/* <Route component={NotFound} /> */}
                     </Switch>
                     <Footer />

@@ -31,13 +31,13 @@ class Carousel extends React.Component {
                 </div>
                 <div className="QC-right">
                     <div >
-                        <a><img src="https://cdn.tgdd.vn/2019/10/banner/A20s-398-110-398x110.png" /></a>
+                        <a href="/"><img src="https://cdn.tgdd.vn/2019/10/banner/A20s-398-110-398x110.png" alt="phone"/></a>
                     </div>
                     <div >
-                        <a><img src="https://cdn.tgdd.vn/2019/10/banner/Sticky-iPhone-398-110-398x110.png" /></a>
+                        <a href="/"><img src="https://cdn.tgdd.vn/2019/10/banner/Sticky-iPhone-398-110-398x110.png" alt="phone"/></a>
                     </div>
                     <div >
-                        <a><img  src="https://imgs.viettelstore.vn/images/Advertises/tra-gop-homecredit-phai_27606051802102019.jpg" /></a>
+                        <a href="/"><img  src="https://imgs.viettelstore.vn/images/Advertises/tra-gop-homecredit-phai_27606051802102019.jpg" alt="phone"/></a>
                     </div>
                 </div>
             </div>

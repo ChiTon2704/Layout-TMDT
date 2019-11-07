@@ -12,17 +12,17 @@ class Footer extends React.Component {
                         </div>
                         <div className="col-4 about ">
                             <h5>Navigation</h5>
-                            <a>
+                            <p>
                                 <li>adasd</li>
                                 <li>asdasdasd</li>
-                            </a>
+                            </p>
                         </div>
                         <div className="col-3 about">
                             <h5>Resources</h5>
-                            <a>
+                            <p>
                                 <li>adasd</li>
                                 <li>asdasdasd</li>
-                            </a>
+                            </p>
                         </div>
                     </div>
                     <hr />
@@ -32,17 +32,17 @@ class Footer extends React.Component {
                             <div>
                                 <ul className="social-network social-circle">
                                     {/* <li><a href="#" className="icoRss" title="Rss"><i className="fa fa-rss"></i></a></li> */}
-                                    <li><a href="#" className="icoFacebook" title="Facebook"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" className="icoTwitter" title="Twitter"><i className="fa fa-twitter"></i></a></li>
+                                    <li><a href="/" className="icoFacebook" title="Facebook"><i className="fa fa-facebook"></i></a></li>
+                                    <li><a href="/" className="icoTwitter" title="Twitter"><i className="fa fa-twitter"></i></a></li>
                                     {/* <li><a href="#" className="icoGoogle" title="Google +"><i className="fa fa-google-plus"></i></a></li> */}
-                                    <li><a href="#" className="icoLinkedin" title="Linkedin"><i className="fa fa-linkedin"></i></a></li>
+                                    <li><a href="/" className="icoLinkedin" title="Linkedin"><i className="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col text-center" >
                             <h6>Công ty HNTT HN_CT</h6>
-                            <a className="">
-                                <img className="img " src="LOGOG.png" />
+                            <a href="/" className="">
+                                <img className="img " src="LOGOG.png" alt="phone"/>
                             </a>
                         </div>
                         <div className="col text-center">
@@ -53,7 +53,7 @@ class Footer extends React.Component {
 
                 </div>
                 <div className="copyright">
-                    <a>© 2019. Công ty cổ phần HN_CT. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. Địa chỉ: 128 Trần Quang Khải, P. Tân Định, Q.1, TP.Hồ Chí Minh. Điện thoại: 18001060</a>
+                    <p>© 2019. Công ty cổ phần HN_CT. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. Địa chỉ: 128 Trần Quang Khải, P. Tân Định, Q.1, TP.Hồ Chí Minh. Điện thoại: 18001060</p>
                 </div>
             </div>
         )

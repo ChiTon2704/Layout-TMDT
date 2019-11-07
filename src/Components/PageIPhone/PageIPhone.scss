@@ -1,17 +1,18 @@
 .PageIPhoneComponent {
-  .allphone-img {
-    .a {
-      height: 13%;
-      width: 13%;
-      border: 1px solid #ccc;
-      padding: 5px;
-    }
-  }
+  min-height: 100vh;
+  // .allphone-img {
+  //   .a {
+  //     height: 13%;
+  //     width: 13%;
+  //     border: 1px solid #ccc;
+  //     padding: 5px;
+  //   }
+  // }
   .galleryall {
     margin: 0px;
     border: 1px solid #ccc;
     float: left;
-    width: 304px;
+    width: 25%;
     height: auto;
     transition: transform 0.4s;
     .desc {
@@ -44,9 +45,12 @@
       }
     }
     img {
-      width: 70%;
+      width: 80%;
+      object-fit: cover;
+      object-position: center;
       padding-top: 20px;
-      height: auto;
+      object-position: center;
+      object-fit: cover;
     }
     .btnn {
       width: 80px;
@@ -109,12 +113,14 @@
   .banner {
     margin: 0 150px;
     img {
-      width: 1220px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
     }
   }
   .heightphone {
     margin: 10px 150px;
     background-color: white;
-    height: 1000px;
+    min-height: 1200px;
   }
 }

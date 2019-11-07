@@ -19,7 +19,7 @@ class PhoneInHome extends React.Component {
     }
     // đỗ dử liệu lấy từ API vào biến đã khởi tạo
     componentDidMount() {
-        axios.get(`http://localhost:7000/api/phones`)// địa chỉ AIP
+        axios.post(`http://localhost:7000/api/phone/getallphones`)// địa chỉ AIP
             .then((result) => {
                 console.log(result.data)
 
@@ -31,8 +31,8 @@ class PhoneInHome extends React.Component {
     // render dữ liệu đã lấy ra giao diện
     render() {
 
-        const elementsNew = this.state.phones.map((product,index) => {
-            if (product.NB === true) {
+        const elementsNew = this.state.phones.map((product, index) => {
+            if (product.is_new === true) {
                 return (
                     <RenderPhone
                         key={index}
@@ -70,68 +70,75 @@ class PhoneInHome extends React.Component {
                         {elementsNew}
                     </div>
                 </div>
-                <div className="dienthoaisale">
+                <div className="">
                     <div className=" text-center ">
-                        <Link to="products/5db1823a7627db2ce419b59d">
-                            <div className="itemsale13">
-                                <p className="namephone13" >Samsung Galaxy Note 10+ <span >Bán chạy</span> </p>
-                                <p className="price13">
-                                    {numeral(23900000).format('0,0')} <sup> đ</sup>
-                                    <p className="price213"> {numeral(26900000).format('0,0')}<sup>đ</sup> </p>
-                                </p>
-                                <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//note-10plus.jpg" />
-                            </div>
-                        </Link>
-                        <Link to="products/5db182437627db2ce419b59e">
-                            <div className="itemsale2">
-                                <p className="namephone2" >Samsung Galazy Note 9 <span >Bán chạy</span> </p>
-                                <p className="price2">
-                                    {numeral(16990000).format('0,0')} <sup> đ</sup>
-                                    <p className="price22"> {numeral(22990000).format('0,0')}<sup>đ</sup> </p>
-                                </p>
-                                <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ss-a70.jpg" />
-                            </div>
-                        </Link>
-                        <Link to="products/5db182797627db2ce419b5a0">
-                            <div className="itemsale13">
-                                <p className="namephone13" >Oppo Reno 10x Zoom Edition <span >Bán chạy</span> </p>
-                                <p className="price13">
-                                    {numeral(23900000).format('0,0')} <sup> đ</sup>
-                                    <p className="price213"> {numeral(26900000).format('0,0')}<sup>đ</sup> </p>
-                                </p>
-                                <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//oppo-a9-2020.png" />
-                            </div>
-                        </Link>
-                        <Link to="products/5db182277627db2ce419b59b">
-                            <div className="itemsale13">
-                                <p className="namephone13" >IPhone 7 Plus 32GB <span >Bán chạy</span> </p>
-                                <p className="price13">
-                                    {numeral(23900000).format('0,0')} <sup> đ</sup>
-                                    <p className="price213"> {numeral(26900000).format('0,0')}<sup>đ</sup> </p>
-                                </p>
-                                <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ip-7-plus-2.jpg" />
-                            </div>
-                        </Link>
-                        <Link to="products/5db182ae7627db2ce419b5a5">
-                            <div className="itemsale2">
-                                <p className="namephone2" >Xiaomi Mi 9T <span >Bán chạy</span> </p>
-                                <p className="price2">
-                                    {numeral(23900000).format('0,0')} <sup> đ</sup>
-                                    <p className="price22"> {numeral(26900000).format('0,0')}<sup>đ</sup> </p>
-                                </p>
-                                <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//vivo-y91c.png" />
-                            </div>
-                        </Link>
-                        <Link to="products/5db1821c7627db2ce419b59a">
-                            <div className="itemsale13">
-                                <p className="namephone13" >iPhone Xs Max 256GB <span >Bán chạy</span> </p>
-                                <p className="price13">
-                                    {numeral(23900000).format('0,0')} <sup> đ</sup>
-                                    <p className="price213"> {numeral(26900000).format('0,0')}<sup>đ</sup> </p>
-                                </p>
-                                <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ip-8-plus.jpg" />
-                            </div>
-                        </Link>
+                        <div className="row dienthoaisale">
+                            <Link className="href"  to="products/5db1823a7627db2ce419b59d">
+                                <div className="itemsale13">
+                                    <p className="namephone13" >Samsung Galaxy Note 10+  </p>
+                                    <p className="price13">
+                                        {numeral(26900000).format('0,0')} <sup> đ</sup>
+
+                                    </p>
+                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//note-10plus.jpg" alt="phone" />
+                                </div>
+                            </Link>
+                            <Link className="href" to="products/5db182437627db2ce419b59e">
+                                <div className="itemsale2">
+                                    <p className="namephone2" >Samsung Galazy Note 9  </p>
+                                    {/* <span >Bán chạy</span> */}
+                                    <p className="price2">
+                                        {numeral(16990000).format('0,0')} <sup> đ</sup>
+                                        <p className="price22"> {numeral(22990000).format('0,0')}<sup>đ</sup> </p>
+                                    </p>
+                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ss-a70.jpg" alt="phone"/>
+                                </div>
+                            </Link>
+                            <Link className="href" to="products/5db182797627db2ce419b5a0">
+                                <div className="itemsale13">
+                                    <p className="namephone13" >Oppo Reno 10x Zoom Edition  </p>
+                                    <p className="price13">
+                                        {numeral(20990000).format('0,0')} <sup> đ</sup>
+
+                                    </p>
+                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//oppo-a9-2020.png" alt="phone" />
+                                </div>
+                            </Link>
+                        </div>
+                        <div className="dienthoaisale row">
+                            <Link className="href" to="products/5dbae388683c4b1b3c2b3a93">
+                                <div className="itemsale13">
+                                    <p className="namephone13" >IPhone 7 Plus 32GB  </p>
+                                    <p className="price13">
+                                        {numeral(11990000).format('0,0')} <sup> đ</sup>
+                                        <p className="price213"> {numeral(12990000).format('0,0')}<sup>đ</sup> </p>
+                                    </p>
+                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ip-7-plus-2.jpg" alt="phone"/>
+                                </div>
+                            </Link>
+                            <Link className="href" to="products/5db182ae7627db2ce419b5a5">
+                                <div className="itemsale2">
+                                    <p className="namephone2" >Xiaomi Mi 9T  </p>
+                                    <p className="price2">
+                                        {numeral(7990000).format('0,0')} <sup> đ</sup>
+
+                                    </p>
+                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//vivo-y91c.png" alt="phone"/>
+                                </div>
+                            </Link>
+                            <Link className="href" to="products/5db1821c7627db2ce419b59a">
+                                <div className="itemsale13">
+                                    <p className="namephone13" >iPhone Xs Max 256GB  </p>
+                                    <p className="price13">
+                                        {numeral(32990000).format('0,0')} <sup> đ</sup>
+                                        <p className="price213"> {numeral(35990000).format('0,0')}<sup>đ</sup> </p>
+                                    </p>
+                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ip-8-plus.jpg" alt="phone"/>
+                                </div>
+                            </Link>
+                        </div>
+
+
                         {/* {elementsSale} */}
                     </div>
                 </div>

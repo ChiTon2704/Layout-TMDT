@@ -11,16 +11,16 @@ class Navbar extends React.Component {
                             <NavLink to='/' className='nav-link'>TRANG CHỦ</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link " href="#">GIỚI THIỆU</a>
+                            <a className="nav-link " href="/">GIỚI THIỆU</a>
                         </li>
                         <li className="nav-item">
                             <NavLink to='/products' className='nav-link'>SẢN PHẨM</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link " href="#">TIN TỨC</a>
+                            <a className="nav-link " href="/">TIN TỨC</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link " href="#">LIÊN HỆ</a>
+                            <a className="nav-link " href="/">LIÊN HỆ</a>
                         </li>
                     </ul>
                 </nav>

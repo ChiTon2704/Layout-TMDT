@@ -1,15 +1,22 @@
 import React from 'react';
 import numeral from 'numeral';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 class RenderPhone extends React.Component {
-    onAddToCart(text) {
-        alert(text);
+    onAddToCart() {
+        Swal.fire({
+            position: 'middle',
+            type: 'success',
+            title: 'Add to cart success !',
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
     render() {
         return (
             <div className="gallery">
-                <Link className="href"  to={'products/' + this.props._id}>
+                <Link className="href" to={'products/' + this.props._id}>
                     <img src={this.props.img} alt="Cinque Terre" />
                     <div className="desc">
                         <div className="p">
@@ -17,10 +24,11 @@ class RenderPhone extends React.Component {
                         </div>
                         <p className="h6">{numeral(this.props.price).format('0,0')} VNĐ </p>
                     </div>
-                    <div className="muangay text-center">
-                        <a href="/" className="a" onClick={() => this.onAddToCart('Đã thêm vào giỏ hàng')}>MUA NGAY</a>
-                    </div>
+
                 </Link>
+                <div className="muangay text-center">
+                    <a href="/" className="a" onClick={() => this.onAddToCart()}>MUA NGAY</a>
+                </div>
             </div>
         )
     }
