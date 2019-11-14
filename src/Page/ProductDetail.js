@@ -51,7 +51,7 @@ class ProductDetail extends Component {
     handleAddItemToCart = (item) => {
         this.props.dispatch({
             type: 'ADD_TO_CART',
-            item
+            item,
         });
         Swal.fire({
             position: 'middle',
@@ -70,7 +70,6 @@ class ProductDetail extends Component {
     componentDidMount() {
         axios.post(`http://localhost:7000/api/phone/getphone/${this.props.match.params.id}`)// địa chỉ AIP
             .then((result) => {
-                // console.log(result.data)
                 this.setState(() => ({
                     phone: result.data
 
@@ -78,9 +77,6 @@ class ProductDetail extends Component {
             })
     }
     render() {
-        console.log(this.state.phone)
-        console.log(this.state.phone.name_phone)
-        // console.log(this.state.phone.providerInfo)
         let item = this.state.phone
         console.log(item)
         console.log(item.name_phone)

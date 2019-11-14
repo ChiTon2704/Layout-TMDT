@@ -3,7 +3,9 @@ import { connect } from 'react-redux'
 import numeral from 'numeral';
 import './index.scss';
 class CartProduct extends Component {
+
     render() {
+
         return (
             <div className="container height-cart">
                 <p className="myshoppingcart">MY SHOPPING CART</p>
@@ -11,6 +13,30 @@ class CartProduct extends Component {
                 <div className="row ">
                     <div className="col-8">
                         <div className="cart-items">
+                            <div className="item">
+                                <div className="row" >
+                                    <div className="col-2">
+
+                                    </div>
+                                    <div className="col-3 center2">
+                                        <p>Product</p>
+                                    </div>
+
+                                    <div className="col-2 center2">
+                                        <p>Price</p>
+                                    </div>
+                                    <div className="col-2 center2">
+                                        <p>quantity</p>
+                                    </div>
+                                    <div className="col-2 center2">
+                                        <p>Total</p>
+                                    </div>
+                                    <div className="col-1 center">
+
+                                    </div>
+                                </div>
+                            </div>
+
                             {this.props.cartItems.map((item) => {
                                 if (!this.props.cartItems) {
                                     return (
@@ -22,19 +48,31 @@ class CartProduct extends Component {
                                 else {
                                     return (
                                         <div className="item">
-
-                                            <div className="  row" >
+                                            <div className="row" >
                                                 <div className="col-2">
                                                     <img src={item.img} />
                                                 </div>
                                                 <div className="col-3 center">
                                                     <p>{item.name_phone}</p>
                                                 </div>
-                                                <div className="col-2 center">
-                                                    <p>{item.quantity}</p>
-                                                </div>
+
                                                 <div className="col-2 center">
                                                     <p>{numeral(item.price).format('0,0')} <sup>đ</sup></p>
+                                                </div>
+                                                <div className="col-2 center">
+                                                    <div className="quantity row">
+                                                        <button className="buttonchangequantity1" >
+                                                             <p >-</p>
+                                                        </button>
+                                                        <div className="quantitydetail">
+                                                             <p type="number" >{item.quantity}</p>
+                                                        </div>
+                                                        <button className="buttonchangequantity2" >
+                                                             <p  >+</p>
+                                                        </button>
+
+                                                    </div>
+                                                    <p>{item.quantity}</p>
                                                 </div>
                                                 <div className="col-2 center">
                                                     <p>{numeral(item.price).format('0,0')} <sup>đ</sup></p>

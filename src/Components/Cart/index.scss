@@ -92,25 +92,24 @@
 // }
 .height-cart {
   min-height: auto;
-  background-color: #D6EAF8;
-  .myshoppingcart{
+  background-color: #d6eaf8;
+  .myshoppingcart {
     font-size: 20px;
     font-weight: bold;
     font-style: italic;
   }
 
-  .cart-items{
+  .cart-items {
     background-color: white;
     border-radius: 5px;
     min-height: auto;
     padding: 10px;
-    
-    .item{
 
+    .item {
       border-bottom: 1px solid #ccc;
       background-color: white;
       position: relative;
-      img{
+      img {
         padding: 10px;
         height: 100%;
         width: 100%;
@@ -119,33 +118,58 @@
         margin: auto;
         width: 60%;
         padding: 10px;
-        border-left: 1px solid #ccc;
+        font-size: 12px;
+      }
+      .center2 {
+        margin: auto;
+        width: 60%;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .quantity {
+        border-radius: 3px;
+        .buttonchangequantity1 {
+          width: 30px;
+          text-align: center;
+          background-color: rgb(202, 227, 245);
+          border: none;
+          border-radius: 5px 0 0 5px;
+          height: 25px;
+          border: 1px solid #ccc;
+        }
+        .buttonchangequantity2 {
+          width: 30px;
+          text-align: center;
+          background-color: rgb(202, 227, 245);
+          border: none;
+          border-radius: 0 5px 5px 0;
+          height: 25px;
+          border: 1px solid #ccc;
+        }
+        .quantitydetail {
+          width: 40px;
+          height: 25px;
+          border-style: solid;
+          border-color: #ccc;
+          border-width: 1px 0 1px  0;
+          text-align: center;
+        }
       }
     }
-    .subtotal{
+    .subtotal {
       padding-top: 10px;
       margin: 0;
       border-bottom: 1px solid #ccc;
     }
-    .total{
+    .total {
       font-weight: bold;
       padding-top: 10px;
-      margin:0;
+      margin: 0;
       font-size: 20px;
     }
   }
 
-
-
-
-
-
-
-
-
-
-
-  
   .cart-info {
     background-color: white;
     padding: 20px;
@@ -167,18 +191,17 @@
       border: 1px solid #ccc;
     }
   }
-  .checkout{
+  .checkout {
     margin: 20px 0;
-    button{
+    button {
       width: 100%;
       border-radius: 5px;
       padding: 10px 0;
-      background-color: #12E23D;
-      border: 1px solid #12E23D;
-      &:hover{
-        background-color: #00FF35;
+      background-color: #12e23d;
+      border: 1px solid #12e23d;
+      &:hover {
+        background-color: #00ff35;
       }
     }
-  
   }
 }
