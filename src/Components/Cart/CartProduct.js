@@ -8,17 +8,7 @@ class CartProduct extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            productquantity: 2,
-            totalcart: 0,
-            
-        }
     }
-    handleChangeQuantity = (productquantity) => {
-        productquantity = productquantity - 1
-    };
-
-
     render() {
 
         return (
@@ -65,7 +55,7 @@ class CartProduct extends Component {
                                         <div className="item">
                                             <div className="row" >
                                                 <div className="col-2">
-                                                    <img src={item.img}  alt={item.name_phone} />
+                                                    <img src={item.img} alt={item.name_phone} />
                                                 </div>
                                                 <div className="col-3 center">
                                                     <p>{item.name_phone}</p>
@@ -76,11 +66,11 @@ class CartProduct extends Component {
                                                 </div>
                                                 <div className="col-2 center">
                                                     <div className="quantity row">
-                                                        <button className="buttonchangequantity1" onClick={() => this.handleChangeQuantity()}>
+                                                        <button className="buttonchangequantity1">
                                                             <p >-</p>
                                                         </button>
                                                         <div className="quantitydetail">
-                                                            <p type="number" > {this.state.productquantity} </p>
+                                                            <p type="number" > {item.quantity} </p>
                                                         </div>
                                                         <button className="buttonchangequantity2" >
                                                             <p  >+</p>
@@ -89,10 +79,11 @@ class CartProduct extends Component {
                                                     </div>
                                                 </div>
                                                 <div className="col-2 center">
-                                                    <p>{numeral(item.price * this.state.productquantity).format('0,0')} <sup>đ</sup></p>
+                                                    <p>{numeral(item.price * item.quantity).format('0,0')} <sup>đ</sup></p>
                                                 </div>
                                                 <div className="col-1 center">
-                                                    <p>X</p>
+                                                    <button className="btn btn-danger glyphicon glyphicon-remove"
+                                                    > X </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -108,7 +99,22 @@ class CartProduct extends Component {
                                             <p>SubTotal :</p>
                                         </div>
                                         <div className="col-7">
-                                            <p>{this.state.totalcart}</p>
+                                            {/* <p>{this.state.totalcart}</p> */}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div className="row subtotal">
+                                <div className="col-7">
+                                </div>
+                                <div className="col-5 ">
+                                    <div className="row ">
+                                        <div className="col-5 ">
+                                            <p>Discount :</p>
+                                        </div>
+                                        <div className="col-7">
+                                            {/* <p>{this.state.totalcart}</p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +129,7 @@ class CartProduct extends Component {
                                             <p>Total    :</p>
                                         </div>
                                         <div className="col-7">
-                                            <p>{this.state.totalcart}</p>
+                                            {/* <p>{this.state.totalcart}</p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -151,11 +157,12 @@ class CartProduct extends Component {
                                     <input type="radio" name="radio" />
                                 <span className="checkmark"></span>
                             </label> */}
+                            <div className="checkout">
+                                {/* <button  >CHECK OUT</button> */}
+                                <img type="button" src={paypal} alt="paypal" />
+                            </div>
                         </div>
-                        <div className="checkout">
-                            {/* <button  >CHECK OUT</button> */}
-                            <img type="button"  src={paypal} alt="paypal" />
-                        </div>
+
                     </div>
                 </div>
             </div>

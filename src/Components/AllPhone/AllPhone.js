@@ -16,7 +16,7 @@ class AllPhone extends React.Component {
     componentDidMount() {
         axios.post(`http://localhost:7000/api/phone/getallphones`)// địa chỉ AIP
             .then((result) => {
-                // console.log(result.data)
+                console.log(result.data)
                 this.setState(() => ({
                     phones: result.data
                 }))
@@ -25,7 +25,7 @@ class AllPhone extends React.Component {
     render() {
        
         const elementsallPhone = this.state.phones.map((product, index) => {
-            if (product.price_sale === 0) {
+            if (product.sale.price_sale === 0) {
                 return (
                     <div className="galleryall" key={index}>
                         <Link className="href" to={'products/' + product._id}>
@@ -38,7 +38,7 @@ class AllPhone extends React.Component {
                                     <p className="">{product.name_phone}</p>
                                 </div>
                                 <span className="pall">
-                                    {numeral(product.price - product.sale).format('0,0')} <sup> đ</sup>
+                                    {numeral(product.price - product.sale.price_sale).format('0,0')} <sup> đ</sup>
                                 </span>
                             </div>
                         </Link>
@@ -57,7 +57,7 @@ class AllPhone extends React.Component {
                                     <p className="">{product.name_phone}</p>
                                 </div>
                                 <p className="pall">
-                                    {numeral(product.price - product.price_sale).format('0,0')} <sup> đ  </sup>
+                                    {numeral(product.price - product.sale.price_sale).format('0,0')} <sup> đ  </sup>
                                     <span className="aall"> {numeral(product.price).format('0,0')}<sup>đ</sup> </span>
                                 </p>
                             </div>
