@@ -7,51 +7,11 @@ import Swal from 'sweetalert2';
 import { connect } from 'react-redux'
 
 class ProductDetail extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         phone: {
-    //             name_phone: '',
-    //             brand: '',
-    //             is_new: true,
-    //             is_sale: true,
-    //             sale: null,
-    //             price: null,
-    //             description: '',
-    //             img: '',
-    //             quantity:null
-    //         }
-    //     }
-    // }
-    // // thêm sản phẩm vô cart
-    // addToCart = () => {
-    //     Swal.fire({
-    //         position: 'middle',
-    //         type: 'success',
-    //         title: 'Add to cart success !',
-    //         showConfirmButton: false,
-    //         timer: 1500
-    //     })
-
-    //     const newitem = {
-    //         name_phone: this.state.phone.name_phone,
-    //         brand: this.state.phone.brand,
-    //         is_new: this.state.phone.is_new,
-    //         is_sale: this.state.phone.is_sale,
-    //         sale: this.state.phone.sale,
-    //         price: this.state.phone.price,
-    //         description: this.state.phone.description,
-    //         img: this.state.phone.img,
-    //         quantity:this.state.phone.quantity
-    //     }
-    //     axios.post('http://localhost:7000/api/phone/additemcart/5dbb249dd12c2006b0f834be', newitem)
-    //         .then((result) => console.log(result))
-    //         .catch((err) => console.log(err))
-    // }
     handleAddItemToCart = (item) => {
         this.props.dispatch({
             type: 'ADD_TO_CART',
             item,
+            quantiity: this.state.productQuanity
         });
         Swal.fire({
             position: 'middle',
@@ -64,7 +24,8 @@ class ProductDetail extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            phone: {}
+            phone: {},
+            productQuanity: 1
         }
     }
     componentDidMount() {
@@ -81,7 +42,7 @@ class ProductDetail extends Component {
         console.log(item)
         console.log(item.name_phone)
         // if (item.sale === 0) {
-    
+
         return (
             <div className="bodydetail">
                 <div className="home">
@@ -113,7 +74,7 @@ class ProductDetail extends Component {
                                     <p className="p2">Thoải mái lựa chọn, xem hàng tại nhà</p>
                                 </div>
                             </Link>
-                            <div className="row  muatragop">
+                            {/* <div className="row  muatragop">
                                 <div className="muatragop1">
                                     <p className="p1">MUA TRẢ GÓP 0%</p>
                                     <p className="p2">Thủ tục đơn giản</p>
@@ -122,7 +83,7 @@ class ProductDetail extends Component {
                                     <p className="p1">TRẢ GÓP QUA THẺ</p>
                                     <p className="p2">Visa, Master, JCB</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

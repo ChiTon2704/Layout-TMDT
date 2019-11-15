@@ -7,20 +7,20 @@ class Navbar extends React.Component {
             <div className="nava">
                 <nav className="navbar navbar-expand-sm bg-warning justify-content-center fixed-top">
                     <ul className="navbar-nav ">
-                        <li className="nav-item a">
+                        <li className="nav-item ">
                             <NavLink to='/' className='nav-link'>TRANG CHỦ</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link " href="/">GIỚI THIỆU</a>
+                            <NavLink to='/introduce' className='nav-link'>GIỚI THIỆU</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink to='/products' className='nav-link'>SẢN PHẨM</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link " href="/">TIN TỨC</a>
+                            <NavLink to='/news' className='nav-link'>TIN TỨC</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link " href="/">LIÊN HỆ</a>
+                            <NavLink to='/contact' className='nav-link'>LIÊN HỆ</NavLink>
                         </li>
                     </ul>
                 </nav>

@@ -2,7 +2,22 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import numeral from 'numeral';
 import './index.scss';
+import paypal from './paypal.png';
+import { changeQuantityProduct } from './action';
 class CartProduct extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            productquantity: 2,
+            totalcart: 0,
+            
+        }
+    }
+    handleChangeQuantity = (productquantity) => {
+        productquantity = productquantity - 1
+    };
+
 
     render() {
 
@@ -50,7 +65,7 @@ class CartProduct extends Component {
                                         <div className="item">
                                             <div className="row" >
                                                 <div className="col-2">
-                                                    <img src={item.img} />
+                                                    <img src={item.img}  alt={item.name_phone} />
                                                 </div>
                                                 <div className="col-3 center">
                                                     <p>{item.name_phone}</p>
@@ -61,21 +76,20 @@ class CartProduct extends Component {
                                                 </div>
                                                 <div className="col-2 center">
                                                     <div className="quantity row">
-                                                        <button className="buttonchangequantity1" >
-                                                             <p >-</p>
+                                                        <button className="buttonchangequantity1" onClick={() => this.handleChangeQuantity()}>
+                                                            <p >-</p>
                                                         </button>
                                                         <div className="quantitydetail">
-                                                             <p type="number" >{item.quantity}</p>
+                                                            <p type="number" > {this.state.productquantity} </p>
                                                         </div>
                                                         <button className="buttonchangequantity2" >
-                                                             <p  >+</p>
+                                                            <p  >+</p>
                                                         </button>
-
+                                                        <p></p>
                                                     </div>
-                                                    <p>{item.quantity}</p>
                                                 </div>
                                                 <div className="col-2 center">
-                                                    <p>{numeral(item.price).format('0,0')} <sup>đ</sup></p>
+                                                    <p>{numeral(item.price * this.state.productquantity).format('0,0')} <sup>đ</sup></p>
                                                 </div>
                                                 <div className="col-1 center">
                                                     <p>X</p>
@@ -94,7 +108,7 @@ class CartProduct extends Component {
                                             <p>SubTotal :</p>
                                         </div>
                                         <div className="col-7">
-                                            <p>1.000.000 đ</p>
+                                            <p>{this.state.totalcart}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +123,7 @@ class CartProduct extends Component {
                                             <p>Total    :</p>
                                         </div>
                                         <div className="col-7">
-                                            <p>1.000.000 đ</p>
+                                            <p>{this.state.totalcart}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -129,9 +143,18 @@ class CartProduct extends Component {
                         <div className="cart-info">
                             <p className="yourinfo">PAYMENT OPTIONS</p>
                             <hr />
+                            {/* <label className="containerr">Paypal
+                                        <input type="radio" checked="checked" name="radio" />
+                                <span className="checkmark"></span>
+                            </label>
+                            <label className="containerr">Thanh toán bằng tiền mặt khi nhận hàng
+                                    <input type="radio" name="radio" />
+                                <span className="checkmark"></span>
+                            </label> */}
                         </div>
                         <div className="checkout">
-                            <button>CHECK OUT</button>
+                            {/* <button  >CHECK OUT</button> */}
+                            <img type="button"  src={paypal} alt="paypal" />
                         </div>
                     </div>
                 </div>

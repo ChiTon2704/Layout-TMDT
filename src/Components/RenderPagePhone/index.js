@@ -3,7 +3,7 @@ import numeral from 'numeral';
 import { Link } from 'react-router-dom';
 class RenderPagePhone extends React.Component {
     render() {
-        if (this.props.sale === 0) {
+        if (this.props.price_sale === 0) {
             return (
                 <div className="galleryall text-center" >
                     <Link className="href" to={'products/' + this.props._id}>
@@ -43,7 +43,7 @@ class RenderPagePhone extends React.Component {
                 <div className="galleryall text-center" >
                     <Link className="href" to={'products/' + this.props._id}>
                         <img className="imgall" src={this.props.img} alt="Cinque Terre" />
-                        <p className="giamgia">GIẢM {numeral(this.props.sale).format('0,0')} VNĐ </p>
+                        {/* <p className="giamgia">GIẢM {numeral(this.props.sale).format('0,0')} VNĐ </p> */}
                         <div className="desc">
                             <div className="aname">
                                 <p className="">{this.props.name_phone}</p>
