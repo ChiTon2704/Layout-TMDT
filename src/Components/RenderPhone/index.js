@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 class RenderPhone extends React.Component {
-    onAddToCart() {
-        Swal.fire({
-            position: 'middle',
-            type: 'success',
-            title: 'Add to cart success !',
-            showConfirmButton: false,
-            timer: 1500
-        })
-    }
+    // onAddToCart() {
+    //     Swal.fire({
+    //         position: 'middle',
+    //         type: 'success',
+    //         title: 'Add to cart success !',
+    //         showConfirmButton: false,
+    //         timer: 1500
+    //     })
+    // }
     render() {
         return (
             <div className="gallery">
@@ -27,7 +27,7 @@ class RenderPhone extends React.Component {
 
                 </Link>
                 <div className="muangay text-center">
-                    <a href="/" className="a" onClick={() => this.onAddToCart()}>MUA NGAY</a>
+                    <Link to={'products/' + this.props._id} className="a">MUA NGAY</Link>
                 </div>
             </div>
         )

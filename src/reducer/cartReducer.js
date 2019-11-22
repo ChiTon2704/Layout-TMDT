@@ -1,5 +1,5 @@
 // const data = JSON.parse(localStorage.getItem('CART'))
-import { ADD_TO_CART, REMOVE_PRODUCT, CHANGE_PRODUCT_QUANTITY } from '../Components/Cart/action';
+import { ADD_TO_CART, REMOVE_PRODUCT, CHANGE_PRODUCT_QUANTITY, DELETE_CART  } from '../Components/Cart/action';
 const cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
 const initState = cartItems ? cartItems : [];
@@ -34,12 +34,31 @@ const cartReducer = (state = initState, action) => {
     //   const cartItemsToRemove = JSON.parse(localStorage.getItem('cartItems'));
 
     case REMOVE_PRODUCT:
-      const cartItemsToRemove = JSON.parse(localStorage.getItem('cartItems'))
-      cartItemsToRemove.items = cartItemsToRemove.items.filter((item) => {
-        return !(item.objectId === action.item.objectId);
+      let cartItemsToRemove = JSON.parse(localStorage.getItem('cartItems'));
+      // Loại bỏ phần tử cần xóa
+      cartItemsToRemove = cartItemsToRemove.filter((item) => {
+        return !(item._id === action.item._id);
       });
+
       localStorage.setItem('cartItems', JSON.stringify(cartItemsToRemove));
-      return { ...state, ...cartItemsToRemove }
+      return cartItemsToRemove
+
+    case CHANGE_PRODUCT_QUANTITY:
+      let cartItemsToChangeQuantiy = JSON.parse(localStorage.getItem('cartItems'));
+      // Lấy vị trí của item cần thay đổi
+      const existItem = cartItemsToChangeQuantiy.findIndex((item) => {
+        return item._id == action.item._id;
+      });
+      // Thay đổi số lượng của sản phẩm
+      cartItemsToChangeQuantiy[existItem].quantity = action.quantity;
+
+      localStorage.setItem('cartItems', JSON.stringify(cartItemsToChangeQuantiy));
+      return cartItemsToChangeQuantiy
+      
+    case DELETE_CART:
+      localStorage.removeItem('cartItems');
+      return state = [];
+
     default:
       return state
   };

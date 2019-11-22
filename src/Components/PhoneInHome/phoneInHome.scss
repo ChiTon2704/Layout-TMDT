@@ -93,9 +93,8 @@
 }
 .bodyphoneinhome {
   margin: 10px 150px;
-  
   background-color: white;
-  min-height:  1200px;
+  min-height:  100vh;
 }
 .dienthoaimoinhat {
   padding-top: 5px;
@@ -103,7 +102,7 @@
     color: white;
     padding: 10px 0;
     background-color: rgb(238, 132, 32);
-    margin: 10px 450px;
+    margin: 10px 400px;
   }
 }
 .dienthoaisale {
@@ -248,6 +247,13 @@
 
   img {
     // float: left;
+    width: 100%;
+  }
+}
+.saleeeee
+{
+  margin:0 150px;
+  img{
     width: 100%;
   }
 }

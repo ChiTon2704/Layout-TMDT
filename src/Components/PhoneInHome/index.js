@@ -64,16 +64,19 @@ class PhoneInHome extends React.Component {
 
         return (
             <div>
+                <div className="saleeeee">
+                    <Link to="/sale"  > <img src="https://cdn.tgdd.vn/2019/11/banner/1200-75-1200x75-(1).png" alt="giam iga" /> </Link >
+                </div>
                 <div className="bodyphoneinhome ">
                     <div className=" text-center dienthoaimoinhat">
-                        <h4 className="">ĐIỆN THOẠI MỚI NHẤT</h4>
+                        <h4 className="">ĐIỆN THOẠI DÀNH CHO  BẠN</h4>
                         {elementsNew}
                     </div>
                 </div>
                 <div className="">
                     <div className=" text-center ">
                         <div className="row dienthoaisale">
-                            <Link className="href"  to="products/5db1823a7627db2ce419b59d">
+                            <Link className="href" to="products/5db1823a7627db2ce419b59d">
                                 <div className="itemsale13">
                                     <p className="namephone13" >Samsung Galaxy Note 10+  </p>
                                     <p className="price13">
@@ -88,18 +91,18 @@ class PhoneInHome extends React.Component {
                                     <p className="namephone2" >Samsung Galazy Note 9  </p>
                                     {/* <span >Bán chạy</span> */}
                                     <p className="price2">
-                                        {numeral(16990000).format('0,0')} <sup> đ</sup>
-                                        <p className="price22"> {numeral(22990000).format('0,0')}<sup>đ</sup> </p>
+                                        {numeral(22990000).format('0,0')} <sup> đ</sup>
+                                        {/* <p className="price22"> {numeral(22990000).format('0,0')}<sup>đ</sup> </p> */}
                                     </p>
-                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ss-a70.jpg" alt="phone"/>
+                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ss-a70.jpg" alt="phone" />
                                 </div>
                             </Link>
                             <Link className="href" to="products/5db182797627db2ce419b5a0">
                                 <div className="itemsale13">
                                     <p className="namephone13" >Oppo Reno 10x Zoom Edition  </p>
                                     <p className="price13">
-                                        {numeral(20990000).format('0,0')} <sup> đ</sup>
-
+                                        {numeral(17990000).format('0,0')} <sup> đ</sup>
+                                        <p className="price213"> {numeral(20990000).format('0,0')}<sup>đ</sup> </p>
                                     </p>
                                     <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//oppo-a9-2020.png" alt="phone" />
                                 </div>
@@ -113,7 +116,7 @@ class PhoneInHome extends React.Component {
                                         {numeral(11990000).format('0,0')} <sup> đ</sup>
                                         <p className="price213"> {numeral(12990000).format('0,0')}<sup>đ</sup> </p>
                                     </p>
-                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ip-7-plus-2.jpg" alt="phone"/>
+                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ip-7-plus-2.jpg" alt="phone" />
                                 </div>
                             </Link>
                             <Link className="href" to="products/5db182ae7627db2ce419b5a5">
@@ -123,17 +126,17 @@ class PhoneInHome extends React.Component {
                                         {numeral(7990000).format('0,0')} <sup> đ</sup>
 
                                     </p>
-                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//vivo-y91c.png" alt="phone"/>
+                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//vivo-y91c.png" alt="phone" />
                                 </div>
                             </Link>
                             <Link className="href" to="products/5db1821c7627db2ce419b59a">
                                 <div className="itemsale13">
                                     <p className="namephone13" >iPhone Xs Max 256GB  </p>
                                     <p className="price13">
-                                        {numeral(32990000).format('0,0')} <sup> đ</sup>
-                                        <p className="price213"> {numeral(35990000).format('0,0')}<sup>đ</sup> </p>
+                                        {numeral(35990000).format('0,0')} <sup> đ</sup>
+                                        {/* <p className="price213"> {numeral(35990000).format('0,0')}<sup>đ</sup> </p> */}
                                     </p>
-                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ip-8-plus.jpg" alt="phone"/>
+                                    <img src="https://imgs.viettelstore.vn/images/Product/ProductImage//ip-8-plus.jpg" alt="phone" />
                                 </div>
                             </Link>
                         </div>

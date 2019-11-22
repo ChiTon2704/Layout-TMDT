@@ -1,10 +1,20 @@
 .footer{
-    background-color: white;
+    background-color: #1C2833 ;
     color: black;
-    height: auto;
+	height: auto;
+	color: white;
+	hr{
+		border-color:  white;
+	}
 }
+
 .about{
-    margin-top:20px
+	margin-top:20px;
+	
+	
+}
+.member{
+	padding-left: 50px;
 }
 .follow{
    
@@ -18,8 +28,8 @@
 }
 .copyright{
     text-align: center;
-    background-color: #ccc;
-    padding:10px 0 ;
+    background-color: #17202A;
+    padding:10px 0 5px 0;
 }
 
 // icon social

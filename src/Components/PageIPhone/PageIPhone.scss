@@ -1,5 +1,5 @@
 .PageIPhoneComponent {
-  min-height: 100vh;
+  // min-height: 100px;
   // .allphone-img {
   //   .a {
   //     height: 13%;
@@ -121,6 +121,11 @@
   .heightphone {
     margin: 10px 150px;
     background-color: white;
-    min-height: 1200px;
+    min-height: 150vh;
+  }
+  .heightphone-sale {
+    margin: 10px 150px;
+    background-color: white;
+    min-height: 2200px;
   }
 }

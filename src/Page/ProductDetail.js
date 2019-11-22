@@ -121,7 +121,7 @@ class ProductDetail extends Component {
 
 
                                 {/*  thêm 1 sản phẩm vô cart trên database */}
-                                <Link className="href" to='/' onClick={() => { this.handleAddItemToCart(item) }}>
+                                <Link className="href" to='/cart' onClick={() => { this.handleAddItemToCart(item) }}>
                                     <div className="muangay">
                                         <p className="p1">MUA NGAY</p>
                                         <p className="p2">Thoải mái lựa chọn, xem hàng tại nhà</p>

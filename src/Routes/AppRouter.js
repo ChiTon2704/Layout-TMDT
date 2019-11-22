@@ -12,6 +12,7 @@ import Oppo from '../Page/Oppo';
 import Xiaomi from '../Page/Xiaomi';
 import Huawei from '../Page/Huawei';
 import Nokia from '../Page/Nokia';
+import Sale from '../Page/Sale';
 import NotFound from '../Page/NotFound';
 import Cart from '../Page/Cart';
 export default class AppRouter extends Component {
@@ -31,6 +32,7 @@ export default class AppRouter extends Component {
                         <Route path='/huawei' component={Huawei} />
                         <Route path='/nokia' component={Nokia} />
                         <Route path='/cart' component={Cart}/>
+                        <Route path='/sale' component={Sale}/>
                         <Route component={NotFound} />
                         
                         {/* <Route component={NotFound} /> */}
