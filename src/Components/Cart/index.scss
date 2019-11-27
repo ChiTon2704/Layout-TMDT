@@ -93,6 +93,20 @@
 .height-cart {
   min-height: auto;
   background-color: #d6eaf8;
+  .cartnull{
+    padding-top:100px;
+    height: 341px;
+    font-size: 20px;
+    text-align: center;
+    button{
+      border:1px white solid;
+      width: 350px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: white;
+      background-color: orange;
+    }
+  }
   .myshoppingcart {
     font-size: 20px;
     font-weight: bold;

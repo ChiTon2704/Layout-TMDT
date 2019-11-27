@@ -1,0 +1,22 @@
+.card-product {
+  height: 300px;
+  border: 1px solid orange;
+  .product-image {
+    // height: 30px;
+    padding-top: 10px;
+    width: 170px;
+  }
+  .product-name {
+    height: 35px;
+  }
+  .product-price {
+    color: red;
+  }
+}
+.sanphamlienquan {
+  font-size: 20px;
+  font-weight: bold;
+}
+.carousel-border {
+  border: orange 1px solid;
+}

@@ -3,8 +3,10 @@ import axios from 'axios';
 import numeral from 'numeral';
 import { Link } from 'react-router-dom';
 import "../Components/ZDetailSCSS/detail.scss";
+import './productSame.scss';
 import Swal from 'sweetalert2';
 import { connect } from 'react-redux'
+import { tsConstructorType } from '@babel/types';
 
 class ProductDetail extends Component {
     handleAddItemToCart = (item) => {
@@ -26,25 +28,86 @@ class ProductDetail extends Component {
         this.state = {
             phone: {},
             sales: {},
+            phones: [],
+            phonesWithBrand: [],
+            phonesWithBrand1: [],
         }
     }
+
+    getPhoneByBrand = () => {
+        const phones = this.state.phones.filter((phone) => {
+            return phone.brand === this.state.phone.brand
+        });
+        const phonesWithBrand = phones.slice(0, 6)
+        return phonesWithBrand;
+    };
+    getPhoneByBrand1 = () => {
+        const phones = this.state.phones.filter((phone) => {
+            return phone.brand === this.state.phone.brand
+        });
+        const phonesWithBrand1 = phones.slice(6, 12)
+        return phonesWithBrand1;
+
+    };
+    getPhoneByBrand2 = () => {
+        const phones = this.state.phones.filter((phone) => {
+            return phone.brand === this.state.phone.brand
+        });
+        const phonesWithBrand2 = phones.slice(12, 18)
+        return phonesWithBrand2;
+    };
     componentDidMount() {
         axios.post(`http://localhost:7000/api/phone/getphone/${this.props.match.params.id}`)// địa chỉ AIP
             .then((result) => {
                 // console.log(result.data.sale)
-                this.setState(() => ({             
+                this.setState(() => ({
                     phone: result.data,
                     sales: result.data.sale
-
+                }))
+            });
+        axios.post(`http://localhost:7000/api/phone/getallphones`)// địa chỉ AIP
+            .then((result) => {
+                this.setState(() => ({
+                    phones: result.data
                 }))
             })
     }
     render() {
         let item = this.state.phone
         let item2 = this.state.sales
-        // console.log(item2.price_sale)
-        // console.log(item)
-        // console.log(item.name_phone)
+        const phonesWithBrand = this.getPhoneByBrand().map((product, index) => {
+            return (
+                <div key={index} className="col-2 card-product">
+                    <Link target="/" className="href" to={product._id}>
+                        <div className=" ">
+                            <img className="product-image" src={product.img}
+                                alt="Card image cap" />
+                            <div className="card-body text-center">
+                                <p className="product-name">{product.name_phone}</p>
+                                <p className="product-price" >{numeral(product.price - product.sale.price_sale).format('0,0')} <sup>đ</sup>                     </p>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+
+            )
+        });
+        const phonesWithBrand1 = this.getPhoneByBrand1().map((product, index) => {
+            return (
+                <div key={index} className="col-2 card-product">
+                    <Link target="/" className="href" to={product._id}>
+                        <div className=" ">
+                            <img className="product-image" src={product.img}
+                                alt="Card image cap" />
+                            <div className="card-body text-center">
+                                <p className="product-name">{product.name_phone}</p>
+                                <p className="product-price" >{numeral(product.price - product.sale.price_sale).format('0,0')} <sup>đ</sup>                     </p>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            )
+        });
         if (item2.price_sale === 0) {
 
             return (
@@ -69,7 +132,6 @@ class ProductDetail extends Component {
                                     <i className="i-km fas fa-check-square"><span >Trả góp 0% trên giá giảm </span></i>
                                     <i className="i-km fas fa-check-square"><span>Giảm thêm 10% tối đa 500.000đ khi thanh toán qua VNPAY</span> </i>
                                 </div>
-                                {/* onClick={this.addToCart} */}
 
                                 {/*  thêm 1 sản phẩm vô cart trên database */}
                                 <Link className="href" to='/cart' onClick={() => { this.handleAddItemToCart(item) }}>
@@ -78,16 +140,27 @@ class ProductDetail extends Component {
                                         <p className="p2">Thoải mái lựa chọn, xem hàng tại nhà</p>
                                     </div>
                                 </Link>
-                                {/* <div className="row  muatragop">
-                                <div className="muatragop1">
-                                    <p className="p1">MUA TRẢ GÓP 0%</p>
-                                    <p className="p2">Thủ tục đơn giản</p>
+                            </div>
+                        </div>
+                        <hr />
+                        <div className=" my-4">
+                            <div>
+                                <p className="sanphamlienquan">Sản phẩm liên quan</p>
+                            </div>
+                            <div id="multi-item-example" className=" slide carousel-multi-item" data-ride="carousel">
+
+                                <div className="carousel-inner carousel-border" role="listbox">
+                                    <div className="carousel-item active">
+                                        <div className="row ">
+                                            {phonesWithBrand}
+                                        </div>
+                                    </div>
+                                    <div className="carousel-item ">
+                                        <div className="row ">
+                                            {phonesWithBrand1}
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="muatragop2">
-                                    <p className="p1">TRẢ GÓP QUA THẺ</p>
-                                    <p className="p2">Visa, Master, JCB</p>
-                                </div>
-                            </div> */}
                             </div>
                         </div>
                     </div>
@@ -127,16 +200,30 @@ class ProductDetail extends Component {
                                         <p className="p2">Thoải mái lựa chọn, xem hàng tại nhà</p>
                                     </div>
                                 </Link>
-                                {/* <div className="row  muatragop">
-                                    <div className="muatragop1">
-                                        <p className="p1">MUA TRẢ GÓP 0%</p>
-                                        <p className="p2">Thủ tục đơn giản</p>
-                                    </div>
-                                    <div className="muatragop2">
-                                        <p className="p1">TRẢ GÓP QUA THẺ</p>
-                                        <p className="p2">Visa, Master, JCB</p>
-                                    </div>
+                            </div>
+                        </div>
+                        <div className=" my-4">
+                            <div>
+                                <p className="sanphamlienquan">Sản phẩm liên quan</p>
+                            </div>
+                            <div id="multi-item-example" className=" slide carousel-multi-item " data-ride="carousel">
+
+                                {/* <div className="carousel-indicators">
+                                    <li data-target="#multi-item-example" data-slide-to="0" className="active"></li>
+                                    <li data-target="#multi-item-example" data-slide-to="1"></li>
                                 </div> */}
+                                <div className="carousel-inner carousel-border" role="listbox">
+                                    <div className="carousel-item active">
+                                        <div className="row">
+                                            {phonesWithBrand}
+                                        </div>
+                                    </div>
+                                    <div className="carousel-item ">
+                                        <div className="row ">
+                                            {phonesWithBrand1}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
