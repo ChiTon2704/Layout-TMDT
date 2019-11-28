@@ -7,16 +7,22 @@ import { Link } from 'react-router-dom';
 import { changeQuantityProduct, removeProduct, deleteCart } from './action';
 import axios from 'axios';
 import { PayPalButton } from "react-paypal-button-v2";
+import Swal from 'sweetalert2';
 
 
 class CartProduct extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            customer: {}
+            customer: {},
+            deliveryState: null
         }
-    }
+        this.userForm = React.createRef();
 
+    }
+    submitForm=()=>{
+        this.userForm.current.dispatchEvent(new Event('submit', { cancelable: true }))
+      }
     handleRemoveItem = (item) => {
         this.props.dispatch(removeProduct(item))
     };
@@ -28,6 +34,10 @@ class CartProduct extends Component {
     };
     handleSubmitCreateBill = (e) => {
         e.preventDefault();
+        let billDetail = []
+        this.props.cartItems.map(item => {
+            billDetail.push({ phoneId: item._id, price: item.price, quantity: item.quantity })
+          })
         const user = {
             name_customer: e.target.name.value,
             phone_customer: e.target.phone.value,
@@ -35,12 +45,19 @@ class CartProduct extends Component {
         }
         axios.post(`http://localhost:7000/api/createCustomer`, user)// địa chỉ AIP
             .then((result) => {
-                console.log(result.data.result);
+                axios.post(`http://localhost:7000/api/createBill`, {billDetail,customer:result.data.result,deliveryState:this.state.deliveryState})// địa chỉ AIP
+                .then((result) => {
+                    Swal.fire({
+                        title:'Thêm vào giỏ hàng thành công'
+                    })
+                })
             })
-
         e.target.name.value = '';
         e.target.phone.value = '';
         e.target.address.value = ''
+            this.setState({
+                deliveryState:null
+            })
     }
     getTotalPrice = () => {
         // let totalDiscount = 0;
@@ -59,6 +76,7 @@ class CartProduct extends Component {
         return totalDiscount;
     }
     render() {
+        console.log(this.props.cartItems)
 
         return (
             <div className="container height-cart">
@@ -194,7 +212,7 @@ class CartProduct extends Component {
                                 </div>
                             </div>
                             <div className="col-4 ">
-                                <form action="" onSubmit={this.handleSubmitCreateBill}>
+                                <form action="" onSubmit={this.handleSubmitCreateBill} ref={this.userForm}>
                                     <div className="cart-info">
                                         <p className="yourinfo">YOUR INFOMATION</p>
                                         <hr />
@@ -216,7 +234,10 @@ class CartProduct extends Component {
                                         amount={parseInt((this.getTotalPrice() - this.getTotalDiscount()) / 23000)}
                                         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
                                         onSuccess={(details, data) => {
-                                            alert("Transaction completed by " + details.payer.name.given_name);
+                                           this.setState({
+                                               deliveryState:'ORDER_PAY_BY_PAYPAL'
+                                           })
+                                           this.submitForm()
                                         }}
                                     />
                                 </div>
