@@ -20,8 +20,12 @@
       padding: 10px 5px 0 5px;
       text-align: left;
       .aname {
+        height: 40px;
         font-size: 14px;
         font-family: Helvetica, Arial, "DejaVu Sans", "Liberation Sans", Freesans, sans-serif;
+        p{
+          margin-bottom: 0px;
+        }
       }
       .pall {
         color: red;

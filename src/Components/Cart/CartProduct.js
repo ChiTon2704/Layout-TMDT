@@ -208,18 +208,10 @@ class CartProduct extends Component {
                                 <div className="cart-info">
                                     <p className="yourinfo">PAYMENT OPTIONS</p>
                                     <hr />
-                                    {/* <label className="containerr">Paypal
-                                        <input type="radio" checked="checked" name="radio" />
-                                <span className="checkmark"></span>
-                            </label>
-                            <label className="containerr">Thanh toán bằng tiền mặt khi nhận hàng
-                                    <input type="radio" name="radio" />
-                                <span className="checkmark"></span>
-                            </label> */}
-                                    <div className="checkout" onClick={this.handledeleteCart}>
-                                        {/* <button  >CHECK OUT</button> */}
+                                    {/* <div className="checkout" onClick={this.handledeleteCart}>
+                                        <button  >CHECK OUT</button>
                                         <img type="button" src={paypal} alt="paypal" />
-                                    </div>
+                                    </div> */}
                                     <PayPalButton
                                         amount={parseInt((this.getTotalPrice() - this.getTotalDiscount()) / 23000)}
                                         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
