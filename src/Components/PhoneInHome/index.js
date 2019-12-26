@@ -65,7 +65,7 @@ class PhoneInHome extends React.Component {
         return (
             <div>
                 <div className="saleeeee">
-                    <Link to="/sale"  > <img src="https://cdn.tgdd.vn/2019/11/banner/1200-75-1200x75-(1).png" alt="giam iga" /> </Link >
+                    <Link to="/sale"  > <img src="https://cdn2.viettelstore.vn/images/Advertises/note-10-friday-dai_61501131928112019.jpg" alt="giam iga" /> </Link >
                 </div>
                 <div className="bodyphoneinhome ">
                     <div className=" text-center dienthoaimoinhat">

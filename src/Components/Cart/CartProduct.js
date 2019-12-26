@@ -20,9 +20,9 @@ class CartProduct extends Component {
         this.userForm = React.createRef();
 
     }
-    submitForm=()=>{
+    submitForm = () => {
         this.userForm.current.dispatchEvent(new Event('submit', { cancelable: true }))
-      }
+    }
     handleRemoveItem = (item) => {
         this.props.dispatch(removeProduct(item))
     };
@@ -37,7 +37,7 @@ class CartProduct extends Component {
         let billDetail = []
         this.props.cartItems.map(item => {
             billDetail.push({ phoneId: item._id, price: item.price, quantity: item.quantity })
-          })
+        })
         const user = {
             name_customer: e.target.name.value,
             phone_customer: e.target.phone.value,
@@ -45,19 +45,20 @@ class CartProduct extends Component {
         }
         axios.post(`http://localhost:7000/api/createCustomer`, user)// địa chỉ AIP
             .then((result) => {
-                axios.post(`http://localhost:7000/api/createBill`, {billDetail,customer:result.data.result,deliveryState:this.state.deliveryState})// địa chỉ AIP
-                .then((result) => {
-                    Swal.fire({
-                        title:'Thêm vào giỏ hàng thành công'
+                axios.post(`http://localhost:7000/api/createBill`, { billDetail, customer: result.data.result, deliveryState: this.state.deliveryState })// địa chỉ AIP
+                    .then((result) => {
+                        Swal.fire({
+                            title: 'Thanh Toán Thành Công',
+                            type: 'success'
+                        })
                     })
-                })
             })
         e.target.name.value = '';
         e.target.phone.value = '';
         e.target.address.value = ''
-            this.setState({
-                deliveryState:null
-            })
+        this.setState({
+            deliveryState: null
+        })
     }
     getTotalPrice = () => {
         // let totalDiscount = 0;
@@ -80,8 +81,6 @@ class CartProduct extends Component {
 
         return (
             <div className="container height-cart">
-
-
                 {/* Giỏ hàng trống */}
                 {this.props.cartItems.length === 0 &&
                     <div className="cartnull">
@@ -145,7 +144,7 @@ class CartProduct extends Component {
                                                                 className="quantitydetail">
                                                                 <p type="number" > {item.quantity} </p>
                                                             </div>
-                                                            <button disabled={item.quantity >= 5}
+                                                            <button disabled={item.quantity >= 99}
                                                                 onClick={() => this.handleChangeQuantity(item, item.quantity + 1)}
                                                                 className="buttonchangequantity2" >
                                                                 <p>+</p>
@@ -212,6 +211,7 @@ class CartProduct extends Component {
                                 </div>
                             </div>
                             <div className="col-4 ">
+                                
                                 <form action="" onSubmit={this.handleSubmitCreateBill} ref={this.userForm}>
                                     <div className="cart-info">
                                         <p className="yourinfo">YOUR INFOMATION</p>
@@ -219,11 +219,11 @@ class CartProduct extends Component {
                                         <p>Name  :   <input name='name' className="input" type="text" /></p>
                                         <p>Phone  :   <input name='phone' className="input" type="text" /></p>
                                         <p>Address  :   <input name='address' className="input" type="text" /></p>
-                                        <button type="submit">thanh toán</button>
+                                        {/* <button type="submit">thanh toán</button> */}
                                     </div>
                                 </form>
                                 <br />
-                                <div className="cart-info">
+                                <div className="cart-info" >
                                     <p className="yourinfo">PAYMENT OPTIONS</p>
                                     <hr />
                                     {/* <div className="checkout" onClick={this.handledeleteCart}>
@@ -234,10 +234,10 @@ class CartProduct extends Component {
                                         amount={parseInt((this.getTotalPrice() - this.getTotalDiscount()) / 23000)}
                                         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
                                         onSuccess={(details, data) => {
-                                           this.setState({
-                                               deliveryState:'ORDER_PAY_BY_PAYPAL'
-                                           })
-                                           this.submitForm()
+                                            this.setState({
+                                                deliveryState: 'ORDER_PAY_BY_PAYPAL'
+                                            })
+                                            this.submitForm()
                                         }}
                                     />
                                 </div>
