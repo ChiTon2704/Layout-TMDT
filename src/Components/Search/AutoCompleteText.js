@@ -14,7 +14,7 @@ export default class AutoCompleteText extends Component {
         axios.post(`http://localhost:7000/api/phone/getallphones`)// địa chỉ AIP
             .then((result) => {
                 // console.log(result.data)
-                // console.log('asc')
+                console.log('asc')
                 this.setState(() => ({
                     phones: result.data
                 }))
