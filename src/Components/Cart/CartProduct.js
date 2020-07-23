@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { connect } from 'react-redux'
 import numeral from 'numeral';
 import './index.scss';
@@ -15,13 +15,26 @@ class CartProduct extends Component {
         super(props)
         this.state = {
             customer: {},
-            deliveryState: null
+            deliveryState: null,
+            isOpenPayment : false,
+            item: {   
+                name: '',
+                phone: '',
+                address: ''
+            },
+            isDisableButton : false
         }
         this.userForm = React.createRef();
-
+    }
+    
+    handleOpenPayment =() =>{
+        this.setState(() => ({
+            isOpenPayment :true
+        }))
     }
     submitForm = () => {
         this.userForm.current.dispatchEvent(new Event('submit', { cancelable: true }))
+        this.props.dispatch(deleteCart())
     }
     handleRemoveItem = (item) => {
         this.props.dispatch(removeProduct(item))
@@ -76,9 +89,25 @@ class CartProduct extends Component {
         })
         return totalDiscount;
     }
+    changeHandler = event => {
+        event.persist();
+      
+        let value = event.target.value;
+      
+        this.setState(prevState => ({
+          item: { ...prevState.item,  [event.target.name]: value }
+        }))
+        if(this.state.item.name !== '' && this.state.item.phone !== '' &&this.state.item.address !== ''){
+            this.setState(() => ({
+                isDisableButton :true
+            }))
+        }else{
+            this.setState(() => ({
+                isDisableButton :false
+            }))
+        }
+      };
     render() {
-        console.log(this.props.cartItems)
-
         return (
             <div className="container height-cart">
                 {/* Giỏ hàng trống */}
@@ -216,21 +245,26 @@ class CartProduct extends Component {
                                     <div className="cart-info">
                                         <p className="yourinfo">YOUR INFOMATION</p>
                                         <hr />
-                                        <p>Name  :   <input name='name' className="input" type="text" /></p>
-                                        <p>Phone  :   <input name='phone' className="input" type="text" /></p>
-                                        <p>Address  :   <input name='address' className="input" type="text" /></p>
-                                        {/* <button type="submit">thanh toán</button> */}
+                                        <p>Name  :   <input id='name'  name='name' className="input" type="text" value={this.state.item.name}
+                                                            onChange={this.changeHandler} /></p>
+                                        <p>Phone  :   <input  name='phone' className="input" type="text" value={this.state.item.phone}
+                                                            onChange={this.changeHandler}/></p>
+                                        <p>Address  :   <input  name='address' className="input" type="text" value={this.state.item.address}
+                                                            onChange={this.changeHandler} /></p>                                
                                     </div>
                                 </form>
                                 <br />
-                                <div className="cart-info" >
+                                <button disabled={this.state.isDisableButton ? false : true}  className="btn-paypal" onClick={this.handleOpenPayment}>THANH TOÁN</button>
+                                {
+                                    this.state.isOpenPayment &&
+                                    <div className="cart-info" disabled={true}>
                                     <p className="yourinfo">PAYMENT OPTIONS</p>
                                     <hr />
                                     {/* <div className="checkout" onClick={this.handledeleteCart}>
                                         <button  >CHECK OUT</button>
                                         <img type="button" src={paypal} alt="paypal" />
                                     </div> */}
-                                    <PayPalButton
+                                    <PayPalButton 
                                         amount={parseInt((this.getTotalPrice() - this.getTotalDiscount()) / 23000)}
                                         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
                                         onSuccess={(details, data) => {
@@ -241,8 +275,11 @@ class CartProduct extends Component {
                                         }}
                                     />
                                 </div>
+                                }
+                               
 
                             </div>
+                            
                         </div>
                     </div>
                 }

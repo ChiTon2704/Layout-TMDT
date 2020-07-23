@@ -59,7 +59,6 @@ class ProductDetail extends Component {
     componentDidMount() {
         axios.post(`http://localhost:7000/api/phone/getphone/${this.props.match.params.id}`)// địa chỉ AIP
             .then((result) => {
-                // console.log(result.data.sale)
                 this.setState(() => ({
                     phone: result.data,
                     sales: result.data.sale

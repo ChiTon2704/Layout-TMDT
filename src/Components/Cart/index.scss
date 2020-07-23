@@ -91,7 +91,7 @@
 //   }
 // }
 .height-cart {
-  min-height: auto;
+  min-height: 700px;
   background-color: #d6eaf8;
   .cartnull{
     padding-top:100px;
@@ -186,6 +186,19 @@
   .paypal{
     width: 100%;
 
+  }
+  .btn-paypal{
+    width: 100%;
+    background-color: rgb(41, 236, 41);
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 5px ;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+  }
+  .btn-paypal:disabled{
+    background-color:#ddd
   }
 
 

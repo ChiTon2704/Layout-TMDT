@@ -18,8 +18,6 @@ class PhoneInHome extends React.Component {
         //API lay het san pham
         axios.post(`http://localhost:7000/api/phone/getallphones`)// địa chỉ AIP
             .then((result) => {
-                console.log(result.data)
-
                 this.setState(() => ({
                     phones: result.data
                 }))

@@ -15,8 +15,6 @@ class PhoneInHome extends React.Component {
     componentDidMount() {
         axios.post(`http://localhost:7000/api/phone/getallphones`)// địa chỉ AIP
             .then((result) => {
-                console.log(result.data)
-
                 this.setState(() => ({
                     phones: result.data
                 }))

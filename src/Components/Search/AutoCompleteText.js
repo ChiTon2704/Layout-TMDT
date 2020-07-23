@@ -13,8 +13,6 @@ export default class AutoCompleteText extends Component {
     componentDidMount() {
         axios.post(`http://localhost:7000/api/phone/getallphones`)// địa chỉ AIP
             .then((result) => {
-                // console.log(result.data)
-                console.log('asc')
                 this.setState(() => ({
                     phones: result.data
                 }))
@@ -31,7 +29,6 @@ export default class AutoCompleteText extends Component {
         this.setState(() => ({ suggestions }))
     }
     renderSuggestions() {
-        // console.log(this.state.phones)
         const { suggestions } = this.state;
         if (suggestions.length === 0) {
             return null;
