@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Footer/index.scss';
-import hnct from './hnct.png';
+import cart from './cart.png';
 class Footer extends React.Component {
     render() {
         return (
@@ -16,6 +16,7 @@ class Footer extends React.Component {
                             <p>
                                 <li>Hoang Nam</li>
                                 <li>Chi Ton</li>
+                                <li>Trung Hieu</li>
                             </p>
                         </div>
                         <div className="col-3 about">
@@ -44,9 +45,9 @@ class Footer extends React.Component {
                             </div>
                         </div>
                         <div className="col-6 text-center" >
-                            <h6>HN_CT Company</h6>
+                            <h6>TSC Company</h6>
                             <a href="/" className="">
-                                <img className="img " src={hnct} alt="phone"/>
+                                <img className="img " src={cart} alt="phone"/>
                             </a>
                         </div>
                         <div className="col ">
@@ -61,7 +62,7 @@ class Footer extends React.Component {
 
                 </div>
                 <div className="copyright">
-                    <p>© 2019. HN - CT Company. All rights reserved | 0963 878 734</p>
+                    <p>© 2019. TSC Company. All rights reserved | 0963 878 734</p>
                 </div>
             </div>
         )
